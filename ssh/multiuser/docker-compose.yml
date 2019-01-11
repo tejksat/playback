@@ -1,0 +1,7 @@
+version: '3'
+services:
+  ssh:
+    build:
+      context: .
+    ports:
+      - $LOCAL_SSH_PORT:22
