@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: django_web
+    command: ./manage.py runserver 0.0.0.0:80
+    ports:
+      - '8000:80'
+    depends_on:
+      - db
+
+  db:
+    image: postgres:10.11
+    container_name: django_web_db
+    restart: "no"
+    ports:
+      - '5433:5432'
