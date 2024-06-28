@@ -12,7 +12,7 @@ done
 
 IMAGE_TAG=dev
 
-CONTAINER_ID=$(docker run -d --rm --publish 127.0.0.1:$OPT_PORT:22/tcp intellij/jupyter-ssh:$IMAGE_TAG)
+CONTAINER_ID=$(docker run -d --rm --publish 127.0.0.1:$OPT_PORT:22/tcp ij/devenv/jupyter-ssh:$IMAGE_TAG)
 
 echo $CONTAINER_ID > .container_id
 

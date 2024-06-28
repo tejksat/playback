@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+ARG UBUNTU_BASE_IMAGE=docker.io/library/ubuntu:22.04
+FROM ${UBUNTU_BASE_IMAGE}
 
 RUN apt-get update && apt-get install --yes \
   openssh-server \

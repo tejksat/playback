@@ -12,7 +12,7 @@ done
 
 IMAGE_TAG=latest
 
-CONTAINER_ID=$(docker run -d --rm --publish 127.0.0.1:$OPT_PORT:22/tcp --security-opt=seccomp:unconfined intellij/ubuntu-sshd:$IMAGE_TAG)
+CONTAINER_ID=$(docker run -d --rm --publish 127.0.0.1:$OPT_PORT:22/tcp --security-opt=seccomp:unconfined ij/devenv/ubuntu-sshd:$IMAGE_TAG)
 
 echo $CONTAINER_ID > .container_id
 

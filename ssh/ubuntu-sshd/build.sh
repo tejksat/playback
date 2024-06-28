@@ -2,4 +2,4 @@
 
 IMAGE_TAG=latest
 
-docker build --tag intellij/ubuntu-sshd:$IMAGE_TAG .
+docker build --tag ij/devenv/ubuntu-sshd:$IMAGE_TAG .
